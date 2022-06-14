@@ -4,12 +4,12 @@ function Stocks() {
   const loggedIn = true;
   const history = useHistory();
 
-  if (!loggedIn) return <Redirect to="/not-logged-in" />;
-
   const handleClick = () => {
     window.alert("Sending info to the DB!");
     history.push("/");
   };
+
+  if (!loggedIn) return <Redirect to="/not-logged-in" />;
 
   return (
     <div className="comp orange">

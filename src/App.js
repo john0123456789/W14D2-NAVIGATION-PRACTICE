@@ -7,30 +7,40 @@ function App() {
   return (
     <div className="main">
       <h1>App Component</h1>
-      <NavLink
-        activeClassName="purple"
-        activeStyle={{ fontWeight: "bold" }}
-        exact
-        to="/"
-      >
-        Home
-      </NavLink>
-      <NavLink
-        activeClassName="purple"
-        activeStyle={{ fontWeight: "bold" }}
-        exact
-        to="/stocks"
-      >
-        Stocks
-      </NavLink>
-      <NavLink
-        activeClassName="purple"
-        activeStyle={{ fontWeight: "bold" }}
-        exact
-        to="/movies"
-      >
-        Movies
-      </NavLink>
+      <nav className="comp nav">
+        <ul>
+          <li>
+            <NavLink
+              activeClassName="purple"
+              activeStyle={{ fontWeight: "bold" }}
+              exact
+              to="/"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName="purple"
+              activeStyle={{ fontWeight: "bold" }}
+              exact
+              to="/stocks"
+            >
+              Stocks
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName="purple"
+              activeStyle={{ fontWeight: "bold" }}
+              exact
+              to="/movies"
+            >
+              Movies
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
       <Switch>
         <Route exact path="/">
           <Home />
